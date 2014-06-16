@@ -64,14 +64,14 @@ public:
         vSeeds.push_back(CDNSSeedData("israelcoin.org", "dnsseed.israelcoin.org"));
 
         // Workaround for Boost not being quite compatible with C++11;
-        std::vector<unsigned char> pka = list_of(102);
+        std::vector<unsigned char> pka = list_of(102); // begins with an i
         base58Prefixes[PUBKEY_ADDRESS] = pka;
         
-        std::vector<unsigned char> sca = list_of(22);
+        std::vector<unsigned char> sca = list_of(22); // begins with a 2
         base58Prefixes[SCRIPT_ADDRESS] = sca;
         
         // should be 128 more thatn PUBKEY_ADDRESS
-        std::vector<unsigned char> sk  = list_of(230);
+        std::vector<unsigned char> sk  = list_of(230); // begins with an 8
         base58Prefixes[SECRET_KEY]     = sk;
         
         std::vector<unsigned char> epk = list_of(0x04)(0x88)(0xC4)(0x2E);
